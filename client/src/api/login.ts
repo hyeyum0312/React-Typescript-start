@@ -42,7 +42,6 @@ export const getCurrentUserInfo = async (): Promise<User | null> => {
 export const getItems = async (): Promise<Item[] | null> => {
   const itemRes = await fetch(`${ BASE_URL }/items`, {
     method: 'GET',
-    credentials:'include', // 클라이언트와 서버가 통신할때 쿠키 값을 공유하겠다는 설정
     headers: {
       'Content-Type': 'application/json',
       credentials: 'include'
@@ -56,7 +55,6 @@ export const getItems = async (): Promise<Item[] | null> => {
 export const getAllItems = async (): Promise<Item[] | null> => {
   const itemRes = await fetch(`${ BASE_URL }/all-items`, {
     method: 'GET',
-    credentials:'include', // 클라이언트와 서버가 통신할때 쿠키 값을 공유하겠다는 설정
     headers: {
       'Content-Type': 'application/json',
       credentials: 'include'
